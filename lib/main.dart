@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:maxfit/screens/AuthScreen.dart';
-import 'package:maxfit/screens/HomeScreen.dart';
 
 void main() {
   runApp(App());

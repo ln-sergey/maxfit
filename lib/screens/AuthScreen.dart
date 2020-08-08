@@ -21,8 +21,34 @@ class _AuthScreenState extends State<AuthScreen> {
         body: Column(
           children: [
             _logo(),
-            _form('LOGIN', _buttonAction),
-          ],
+            showLogin ? Column(
+              children: [
+                _form('LOGIN', _buttonAction),
+                Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: GestureDetector(
+                    child: Text('Not Registered yet? Register', style: TextStyle(fontSize: 20, color: Colors.white),),
+                    onTap: () => setState(() {
+                      showLogin = false;
+                    }),
+                  ), 
+                )
+              ],
+            ) : Column(
+              children: [
+                _form('REGISTER', _buttonAction),
+                Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: GestureDetector(
+                    child: Text('Already Registered? Login!', style: TextStyle(fontSize: 20, color: Colors.white),),
+                    onTap: () => setState(() {
+                      showLogin = true;
+                    }),
+                  ), 
+                )
+              ],
+            )
+          ]
         ),
       );
 
