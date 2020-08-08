@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maxfit/screens/AuthScreen.dart';
 import 'package:maxfit/screens/HomeScreen.dart';
 
 void main() {
@@ -13,6 +14,6 @@ class App extends StatelessWidget {
           primaryColor: Color.fromRGBO(50, 65, 85, 1),
           textTheme: TextTheme(headline1: TextStyle(color: Colors.white)),
         ),
-        home: HomeScreen(),
+        home: AuthScreen(),
       );
 }
